@@ -1,5 +1,5 @@
 import * as THREE from "../build/three.module.js";
-
+import { OrbitControls } from "../examples/jsm/controls/OrbitControls.js";
 class App {
 	constructor() {
 		const divContainer = document.querySelector("#webgl-container");
@@ -30,7 +30,7 @@ class App {
 	}
 
 	_setupModel() {
-		const geometry = new THREE.BoxGeometry(1, 1, 1);
+		const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2);
 		const fillMaterial = new THREE.MeshPhongMaterial({ color: 0x515151 });
 		const cube = new THREE.Mesh(geometry, fillMaterial);
 
@@ -95,3 +95,4 @@ class App {
 
 window.onload = function () {
 	new App();
+};
