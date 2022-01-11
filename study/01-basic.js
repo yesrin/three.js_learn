@@ -24,10 +24,6 @@ class App {
 		requestAnimationFrame(this.render.bind(this));
 	}
 
-	_setupControls() {
-		new OrbitControls(this._camera, this._divContainer);
-	}
-
 	_setupModel() {
 		const geometry = new THREE.BoxGeometry(1, 1, 1);
 
