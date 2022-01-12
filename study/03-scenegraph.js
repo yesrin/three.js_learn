@@ -74,6 +74,8 @@ class App {
 		moonOrbit.add(moonMesh);
 
 		this._solarSystem = solarSystem;
+		this._earthOrbit = earthOrbit;
+		this._moonOrbit = moonOrbit;
 	}
 
 	_setupCamera() {
@@ -99,6 +101,8 @@ class App {
 	update(time) {
 		time *= 0.001; // second unit
 		this._solarSystem.rotation.y = time / 2;
+		this._earthOrbit.rotation.y = time * 2;
+		this._moonOrbit.rotation.y = time * 5;
 	}
 
 	render(time) {
